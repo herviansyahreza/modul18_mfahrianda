@@ -34,7 +34,7 @@ const Login = () => {
       // jika gagal, tampilkan alert 'Login Gagal'
       
       try{
-        const response = await axios.post('http://localhost:3000/login', {
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
           email: data.get('email'),
           password: data.get('password')
         })
